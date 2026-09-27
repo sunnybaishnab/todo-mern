@@ -1,0 +1,62 @@
+.task-filters {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 13px;
+  padding: 4px;
+  background: #e8ede9;
+  border-radius: 7px;
+}
+
+.filter-button {
+  min-height: 33px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0 11px;
+  color: #67756c;
+  background: transparent;
+  border: 0;
+  border-radius: 5px;
+  font: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.filter-button[aria-pressed='true'] {
+  color: var(--ink);
+  background: white;
+  box-shadow: 0 1px 2px rgba(22, 39, 30, 0.1);
+}
+
+.filter-button:focus-visible {
+  outline: 3px solid rgba(39, 92, 74, 0.3);
+  outline-offset: 2px;
+}
+
+.filter-count {
+  min-width: 18px;
+  height: 18px;
+  display: inline-grid;
+  place-items: center;
+  padding: 0 4px;
+  color: inherit;
+  background: rgba(26, 46, 35, 0.07);
+  border-radius: 9px;
+  font-size: 10px;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 430px) {
+  .task-filters {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .filter-button {
+    gap: 4px;
+    padding-inline: 7px;
+  }
+}
